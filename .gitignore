@@ -194,3 +194,4 @@ Thumbs.db
 yarn.lock
 pnpm-lock.yaml
 bun.lockb
+secrets/

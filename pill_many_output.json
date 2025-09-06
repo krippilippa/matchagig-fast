@@ -1,0 +1,150 @@
+{
+  "pills": [
+    {
+      "pill": "sales",
+      "variants": [
+        "sales"
+      ]
+    },
+    {
+      "pill": "digital marketing",
+      "variants": [
+        "digital marketing"
+      ]
+    },
+    {
+      "pill": "business development",
+      "variants": [
+        "business development"
+      ]
+    }
+  ],
+  "resumes": [
+    {
+      "resume_id": "9ae3eae9-6816-4b05-b182-f8c97830d63d",
+      "resume_name": "Resume_Omar_Hassan.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.341101993885578,
+          "best_chunk_text": "- Generated new leads outside Egypt to build a strong sales pipeline. - Maintained long-term client relationships and monitored evolving needs. - Tracked prospects in CRM and prepared management reports."
+        },
+        "digital marketing": {
+          "max_sim": 0.452376490548079,
+          "best_chunk_text": "Skills: - Business: B2B Sales, Negotiation, Marketing Strategy - Marketing: Content Marketing, Social Media, SEO, Email Marketing - Technical: HTML, Google Ads, Google Analytics - Interpersonal: Communication, Teamwork, Public Speaking"
+        },
+        "business development": {
+          "max_sim": 0.5747927002547,
+          "best_chunk_text": "Skilled in building client relationships, negotiating deals, and developing growth strategies to increase revenue. Adept at market research, business strategy, and partnership development."
+        }
+      }
+    },
+    {
+      "resume_id": "272d16b7-2c76-4c21-8bba-d4d7645d7817",
+      "resume_name": "Resume_Arjun_Patel_v2.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.362795900189754,
+          "best_chunk_text": "- Swedish: A2—A1 (Basic user) Skills: - Consultative Selling - High-Net-Worth Client Acquisition - CRM Management - Customer Retention Strategies - Luxury Product Positioning - Process Optimization - Data-Driven Personalization"
+        },
+        "digital marketing": {
+          "max_sim": 0.460014480947159,
+          "best_chunk_text": "- Social Media - B2B Relationship Building - Visual Merchandising - Negotiation"
+        },
+        "business development": {
+          "max_sim": 0.48149992470443,
+          "best_chunk_text": "- Social Media - B2B Relationship Building - Visual Merchandising - Negotiation"
+        }
+      }
+    },
+    {
+      "resume_id": "57057168-226d-450d-9686-ad58c4530077",
+      "resume_name": "Resume_Angela_Martin_v2.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.299401321989337,
+          "best_chunk_text": "- Content writing - Direct sales - B2B research - Social media marketing Professional Experience: Brand Associate | Victoria’s Secret, London"
+        },
+        "digital marketing": {
+          "max_sim": 0.430158623438049,
+          "best_chunk_text": "Contact Information: Phone: +1 (555) 345-6789 Email: angela.martin@email.com LinkedIn: linkedin.com/in/angela-martin Key Competencies: - Consumer insights - Storytelling - SEO & digital marketing - Canva & content templates"
+        },
+        "business development": {
+          "max_sim": 0.469110516852768,
+          "best_chunk_text": "- Analyzed consumer feedback and competitive intelligence for business strategy and product development. - Conducted B2B interviews and research on market trends and brand positioning."
+        }
+      }
+    },
+    {
+      "resume_id": "3cd201ec-9c75-4c0e-a873-029657413b54",
+      "resume_name": "Resume_Barbara_Novak.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.40055916314356,
+          "best_chunk_text": "- Managed end-to-end sales and negotiated long-term partnerships. - Coordinated with production and logistics teams to ensure smooth delivery. - Prepared quotations and delivered high-quality customer service."
+        },
+        "digital marketing": {
+          "max_sim": 0.262968353540654,
+          "best_chunk_text": "Work Experience: Inside Sales Executive | Siemens, Portugal (Jul 2023 — Present) - Managed assigned projects and handled outbound sales outreach through email, phone, and LinkedIn."
+        },
+        "business development": {
+          "max_sim": 0.409181601629998,
+          "best_chunk_text": "- Qualified leads, scheduled meetings, and supported new business development. - Collaborated with management to forecast and identify sales opportunities. Export Analyst | O2B, Poland (Sep 2022 — Jun 2023)"
+        }
+      }
+    },
+    {
+      "resume_id": "c4e0b4e4-78ba-47d1-b757-848aa88103ae",
+      "resume_name": "Resume_Karim_Abdallah.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.304032036782266,
+          "best_chunk_text": "- Collected and analyzed business requirements. - Conducted financial tasks including invoicing and account reconciliation. - Performed market research to identify business opportunities."
+        },
+        "digital marketing": {
+          "max_sim": 0.275901433718036,
+          "best_chunk_text": "- Contributed to variance analysis and budget preparation. Skills & Interests: - Hard Skills: Microsoft Office, Python, Canva, CRM systems, LinkedIn Sales Navigator"
+        },
+        "business development": {
+          "max_sim": 0.462726439562615,
+          "best_chunk_text": "Work Experience: Business Development | BePro | Beirut, Lebanon (Aug 2023 — Sep 2024) - Built and maintained long-term relationships with clients. - Identified and developed business opportunities in the European market."
+        }
+      }
+    },
+    {
+      "resume_id": "17218967-db4a-4510-8e29-ad264baec91c",
+      "resume_name": "Resume_Alexandra_Novak.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.209066982158063,
+          "best_chunk_text": "- Built strong relationships with students, parents, and administrators. - Monitored and documented student performance. Intern English Lector University of Southern Mississippi, Hattiesburg, MS, USA (Nov 2020 — May 2021)"
+        },
+        "digital marketing": {
+          "max_sim": 0.203583800685893,
+          "best_chunk_text": "Committed to nurturing a positive, inclusive classroom environment. Contact Information: Phone: +1 (555) 987-6543 Email: alexandra.novak@email.com LinkedIn: linkedin.com/in/alexandra-novak-edu License: B"
+        },
+        "business development": {
+          "max_sim": 0.23615029992913,
+          "best_chunk_text": "- Facilitated discussions and interactive activities. - Organized and led workshops (creative writing, academic writing, public speaking). - Supported students in developing critical thinking and comprehension skills."
+        }
+      }
+    },
+    {
+      "resume_id": "4325e23f-2c23-4176-8bdc-c1f64d2ea6ed",
+      "resume_name": "Resume_Lina_Khaled_v2.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.172082797661329,
+          "best_chunk_text": "Hands-on research experience and a commitment to contributing to innovative and impactful scientific work. Contact Information: Phone: +1 (555) 678-9012 Email: lina.khaled@email.com LinkedIn: linkedin.com/in/lina-khaled"
+        },
+        "digital marketing": {
+          "max_sim": 0.198307192527392,
+          "best_chunk_text": "- Lab Techniques: Media prep, Gram staining, ELISA, PCR - Chemical Analysis: Titration, Spectrophotometry (UV-Vis, FTIR), Chromatography (HPLC, GC) - Molecular Biology: DNA/RNA extraction, Gel electrophoresis, Genome analysis"
+        },
+        "business development": {
+          "max_sim": 0.228019406916447,
+          "best_chunk_text": "- Researched sustainability practices and improved environmental impact at the university. - Prepared reports for competitions including UI GreenMetric. - Supported national and international sustainability initiatives."
+        }
+      }
+    }
+  ]
+}

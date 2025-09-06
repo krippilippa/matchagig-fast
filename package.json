@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ingest": "node --no-deprecation ingest.js",
     "search": "node --no-deprecation search.js",
-    "clear": "node --no-deprecation clear-db.js"
+    "clear": "node --no-deprecation clear-db.js",
+    "pill:one": "node --no-deprecation pill-one.js",
+    "pill:many": "node --no-deprecation pill-many.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +18,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.56.1",
     "dotenv": "^17.2.1",
+    "googleapis": "^159.0.0",
     "openai": "^5.16.0",
     "pdf-parse": "^1.1.1"
   }
