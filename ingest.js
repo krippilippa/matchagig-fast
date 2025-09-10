@@ -112,16 +112,19 @@ async function upsertChunksBatched(resumeId, chunks) {
 async function ingestSinglePDF(filePath){
   const buf = fs.readFileSync(filePath);
   const sha = crypto.createHash("sha256").update(buf).digest("hex");
-  const filename = filePath.split("/").pop();
+  const originalFilename = filePath.split("/").pop();
 
-  // storage
-  const storagePath = `${sha}/${filename}`;
-  await supabaseAdmin.storage.from("resumes").upload(storagePath, buf, { upsert:true });
+  // storage - use hash as filename to avoid encoding issues
+  const storagePath = `${sha}/${sha}.pdf`;
+  await supabaseAdmin.storage.from("resumes").upload(storagePath, buf, { 
+    upsert: true,
+    contentType: 'application/pdf'
+  });
   const pdf_url = `${process.env.SUPABASE_URL}/storage/v1/object/public/resumes/${storagePath}`;
 
-  // row
+  // row - store original filename in database, use hash in storage
   const { data: resume, error } = await supabaseAdmin
-    .from("resumes").insert({ name: filename, pdf_url, sha256: sha }).select().single();
+    .from("resumes").insert({ name: originalFilename, pdf_url, sha256: sha }).select().single();
   if(error) throw error;
 
   // parse + chunk
@@ -140,7 +143,7 @@ async function ingestSinglePDF(filePath){
 
   await upsertChunksBatched(resume.id, chunks);
   console.log("Ingested:", resume.id, "chunks:", chunks.length);
-  return { resume_id: resume.id, chunks: chunks.length, filename };
+  return { resume_id: resume.id, chunks: chunks.length, filename: originalFilename };
 }
 
 async function ingestFolder(folderPath, recursive = false) {

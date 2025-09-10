@@ -21,128 +21,200 @@
   ],
   "resumes": [
     {
-      "resume_id": "9ae3eae9-6816-4b05-b182-f8c97830d63d",
-      "resume_name": "Resume_Omar_Hassan.pdf",
+      "resume_id": "22ae583a-9959-40ab-a2e6-543fcc8d9ac2",
+      "resume_name": "resume_aml_adel.pdf",
       "scores": {
         "sales": {
-          "max_sim": 0.341101993885578,
-          "best_chunk_text": "- Generated new leads outside Egypt to build a strong sales pipeline. - Maintained long-term client relationships and monitored evolving needs. - Tracked prospects in CRM and prepared management reports."
+          "max_sim": 0.44583646791686,
+          "best_chunk_text": "Digital Sales Specialist Drive digital revenue growth for the company; take revenue share out of the market, and create new digital business. Locate and contact potential clients to offer their firm's advertising services"
         },
         "digital marketing": {
-          "max_sim": 0.452376490548079,
-          "best_chunk_text": "Skills: - Business: B2B Sales, Negotiation, Marketing Strategy - Marketing: Content Marketing, Social Media, SEO, Email Marketing - Technical: HTML, Google Ads, Google Analytics - Interpersonal: Communication, Teamwork, Public Speaking"
+          "max_sim": 0.590096522558154,
+          "best_chunk_text": "Marketing SkillsContent Marketing, Digital Marketing, Social Media Marketing, Search Engine Optimization (SEO), Email Marketing Technical SkillsHTML, Google Ads, Google Analytics"
         },
         "business development": {
-          "max_sim": 0.5747927002547,
+          "max_sim": 0.574714864807444,
           "best_chunk_text": "Skilled in building client relationships, negotiating deals, and developing growth strategies to increase revenue. Adept at market research, business strategy, and partnership development."
         }
       }
     },
     {
-      "resume_id": "272d16b7-2c76-4c21-8bba-d4d7645d7817",
-      "resume_name": "Resume_Arjun_Patel_v2.pdf",
+      "resume_id": "298d8ad5-5750-4c45-8025-8f624d3f68f7",
+      "resume_name": "Resume_Puchala_Barbara_2024.pdf",
       "scores": {
         "sales": {
-          "max_sim": 0.362795900189754,
-          "best_chunk_text": "- Swedish: A2—A1 (Basic user) Skills: - Consultative Selling - High-Net-Worth Client Acquisition - CRM Management - Customer Retention Strategies - Luxury Product Positioning - Process Optimization - Data-Driven Personalization"
+          "max_sim": 0.432576132791523,
+          "best_chunk_text": "- Searching sales opportunities and identifying customer needs, - Perform cost-benefit and needs analysis of existing and potential customers to meet their needs, participate in sales negotiations."
         },
         "digital marketing": {
-          "max_sim": 0.460014480947159,
-          "best_chunk_text": "- Social Media - B2B Relationship Building - Visual Merchandising - Negotiation"
+          "max_sim": 0.383033140536175,
+          "best_chunk_text": "- Collaborate with other teams, such as Marketing to develop and execute strategies for generating new business and achieving revenue targets"
         },
         "business development": {
-          "max_sim": 0.48149992470443,
-          "best_chunk_text": "- Social Media - B2B Relationship Building - Visual Merchandising - Negotiation"
+          "max_sim": 0.508379727102542,
+          "best_chunk_text": "- Identify and develop new business and sales opportunities by researching and analyzing market trends and potential clients, - Drive the sales of the assigned customers and builds long lasting and effective customer relationships, - Prepar"
         }
       }
     },
     {
-      "resume_id": "57057168-226d-450d-9686-ad58c4530077",
-      "resume_name": "Resume_Angela_Martin_v2.pdf",
+      "resume_id": "74764402-01b0-48ae-a2cc-aa2e085c880b",
+      "resume_name": "Resume_Rafayat Pervez.pdf",
       "scores": {
         "sales": {
-          "max_sim": 0.299401321989337,
-          "best_chunk_text": "- Content writing - Direct sales - B2B research - Social media marketing Professional Experience: Brand Associate | Victoria’s Secret, London"
+          "max_sim": 0.387332732617913,
+          "best_chunk_text": "- Sales Automation: Designed and implemented HubSpot workflows that automated 80% of lead follow-ups, reducing sales cycle time by 40%"
         },
         "digital marketing": {
-          "max_sim": 0.430158623438049,
-          "best_chunk_text": "Contact Information: Phone: +1 (555) 345-6789 Email: angela.martin@email.com LinkedIn: linkedin.com/in/angela-martin Key Competencies: - Consumer insights - Storytelling - SEO & digital marketing - Canva & content templates"
+          "max_sim": 0.426969894531981,
+          "best_chunk_text": "- Content Marketing: Developed a library of 30+ SEO-optimized blog posts targeting B2B decision makers, increasing organic traffic by 75% and generating 120+ qualified leads"
         },
         "business development": {
-          "max_sim": 0.469110516852768,
-          "best_chunk_text": "- Analyzed consumer feedback and competitive intelligence for business strategy and product development. - Conducted B2B interviews and research on market trends and brand positioning."
+          "max_sim": 0.438077768259253,
+          "best_chunk_text": "Luxury Product Positioning Process Optimization Data-Driven Personalization Social Media B2B Relationship Building\n Visual Merchandising Negotiation LANGUAGE SKILLS SKILLS"
         }
       }
     },
     {
-      "resume_id": "3cd201ec-9c75-4c0e-a873-029657413b54",
-      "resume_name": "Resume_Barbara_Novak.pdf",
+      "resume_id": "ed289268-82b8-4087-8826-e19cc6136c23",
+      "resume_name": "Resumé.pdf",
       "scores": {
         "sales": {
-          "max_sim": 0.40055916314356,
-          "best_chunk_text": "- Managed end-to-end sales and negotiated long-term partnerships. - Coordinated with production and logistics teams to ensure smooth delivery. - Prepared quotations and delivered high-quality customer service."
+          "max_sim": 0.314770290695736,
+          "best_chunk_text": "Brand Associate Barista Provided exceptional customer service by assisting with product selections and creating personalized shopping experiences. Exceeded sales targets through in-depth product knowledge and effective upselling techniques."
         },
         "digital marketing": {
-          "max_sim": 0.262968353540654,
-          "best_chunk_text": "Work Experience: Inside Sales Executive | Siemens, Portugal (Jul 2023 — Present) - Managed assigned projects and handled outbound sales outreach through email, phone, and LinkedIn."
+          "max_sim": 0.467825360816631,
+          "best_chunk_text": "Creative and adaptable e-commerce and content specialist with a passion for writing, consumer insights, and digital storytelling. Skilled in editing, market research and visual communication, with experience turning data into compelling nar"
         },
         "business development": {
-          "max_sim": 0.409181601629998,
-          "best_chunk_text": "- Qualified leads, scheduled meetings, and supported new business development. - Collaborated with management to forecast and identify sales opportunities. Export Analyst | O2B, Poland (Sep 2022 — Jun 2023)"
+          "max_sim": 0.468325618705083,
+          "best_chunk_text": "Conducted B2B interviews and business research, gathering insights on market trends and brand positioning. Assisted in survey design, data analysis, and insight generation, supporting decisionmaking for businesses."
         }
       }
     },
     {
-      "resume_id": "c4e0b4e4-78ba-47d1-b757-848aa88103ae",
-      "resume_name": "Resume_Karim_Abdallah.pdf",
+      "resume_id": "cf22aef9-6c47-46b4-b214-75fdc42e5bc3",
+      "resume_name": "Resume-Mabel Magnusson.pdf",
       "scores": {
         "sales": {
-          "max_sim": 0.304032036782266,
-          "best_chunk_text": "- Collected and analyzed business requirements. - Conducted financial tasks including invoicing and account reconciliation. - Performed market research to identify business opportunities."
+          "max_sim": 0.41023348539372,
+          "best_chunk_text": "Conducted engaging product demonstrations and presentations, resulting in increased client interest. Negotiated contracts and closed deals, consistently meeting and exceeding revenue targets. B2B Development Representative"
         },
         "digital marketing": {
-          "max_sim": 0.275901433718036,
-          "best_chunk_text": "- Contributed to variance analysis and budget preparation. Skills & Interests: - Hard Skills: Microsoft Office, Python, Canva, CRM systems, LinkedIn Sales Navigator"
+          "max_sim": 0.365843588260963,
+          "best_chunk_text": "Lead Generation & Research Solution Selling Building Lasting Relationships Cold Outreach & Persistence CRM & Pipeline Management Effective Communication Negotiation & Problem Solving Time Management & Prioritization Team Collaboration &"
         },
         "business development": {
-          "max_sim": 0.462726439562615,
-          "best_chunk_text": "Work Experience: Business Development | BePro | Beirut, Lebanon (Aug 2023 — Sep 2024) - Built and maintained long-term relationships with clients. - Identified and developed business opportunities in the European market."
+          "max_sim": 0.472365443879585,
+          "best_chunk_text": "Conducted engaging product demonstrations and presentations, resulting in increased client interest. Negotiated contracts and closed deals, consistently meeting and exceeding revenue targets. B2B Development Representative"
         }
       }
     },
     {
-      "resume_id": "17218967-db4a-4510-8e29-ad264baec91c",
-      "resume_name": "Resume_Alexandra_Novak.pdf",
+      "resume_id": "97291093-c8dd-4c42-a829-3e93ac90c23a",
+      "resume_name": "Resume_SE.pdf",
       "scores": {
         "sales": {
-          "max_sim": 0.209066982158063,
-          "best_chunk_text": "- Built strong relationships with students, parents, and administrators. - Monitored and documented student performance. Intern English Lector University of Southern Mississippi, Hattiesburg, MS, USA (Nov 2020 — May 2021)"
+          "max_sim": 0.334081401405294,
+          "best_chunk_text": "Customer Relationship Management (CRM) Intern - In charge of creating, executing, and evaluating email marketing campaigns to drive lead creation and conversion"
         },
         "digital marketing": {
-          "max_sim": 0.203583800685893,
-          "best_chunk_text": "Committed to nurturing a positive, inclusive classroom environment. Contact Information: Phone: +1 (555) 987-6543 Email: alexandra.novak@email.com LinkedIn: linkedin.com/in/alexandra-novak-edu License: B"
+          "max_sim": 0.49588179637411,
+          "best_chunk_text": "Online Marketing Intern - Increased CVR by conceptualizing & executing customer acquisition & reactivation measures - Analyzed the competitive landscape & past marketing measures to support the decision-making process"
         },
         "business development": {
-          "max_sim": 0.23615029992913,
-          "best_chunk_text": "- Facilitated discussions and interactive activities. - Organized and led workshops (creative writing, academic writing, public speaking). - Supported students in developing critical thinking and comprehension skills."
+          "max_sim": 0.399943274266332,
+          "best_chunk_text": "Online Marketing Intern - Increased CVR by conceptualizing & executing customer acquisition & reactivation measures - Analyzed the competitive landscape & past marketing measures to support the decision-making process"
         }
       }
     },
     {
-      "resume_id": "4325e23f-2c23-4176-8bdc-c1f64d2ea6ed",
-      "resume_name": "Resume_Lina_Khaled_v2.pdf",
+      "resume_id": "eeb05f68-ce8f-4ad9-b5de-49ffcbdde48f",
+      "resume_name": "Resumé TJ 2025.pdf",
       "scores": {
         "sales": {
-          "max_sim": 0.172082797661329,
-          "best_chunk_text": "Hands-on research experience and a commitment to contributing to innovative and impactful scientific work. Contact Information: Phone: +1 (555) 678-9012 Email: lina.khaled@email.com LinkedIn: linkedin.com/in/lina-khaled"
+          "max_sim": 0.359166982099442,
+          "best_chunk_text": "Broke all-time sales revenue record during the financial crisis in 2008, ultimately saving the company from having to close down the office. Apple / Technology Sales Representative OCT 2007- DEC 2007, CORK, IRELAND"
         },
         "digital marketing": {
-          "max_sim": 0.198307192527392,
-          "best_chunk_text": "- Lab Techniques: Media prep, Gram staining, ELISA, PCR - Chemical Analysis: Titration, Spectrophotometry (UV-Vis, FTIR), Chromatography (HPLC, GC) - Molecular Biology: DNA/RNA extraction, Gel electrophoresis, Genome analysis"
+          "max_sim": 0.361578846887557,
+          "best_chunk_text": "I’m also a certified media advisor with the know-how on how to set up effective marketing strategies across industries. In my spare time I like to stay active by spending time in nature, photographing, exercising at the gym and doing variou"
         },
         "business development": {
-          "max_sim": 0.228019406916447,
-          "best_chunk_text": "- Researched sustainability practices and improved environmental impact at the university. - Prepared reports for competitions including UI GreenMetric. - Supported national and international sustainability initiatives."
+          "max_sim": 0.431635933171641,
+          "best_chunk_text": "I use a consultative sales approach and have experience with building sales strategies, leading sales teams and streamlining business processes."
+        }
+      }
+    },
+    {
+      "resume_id": "5492adff-60c7-4a53-ab38-db263e3b6faf",
+      "resume_name": "Resume v3 2025.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.249170146808339,
+          "best_chunk_text": "D O G U K A N M O H A M M A D A L I C O M P E T E N C E Business Development, Trading, Negotiation, Sales & Marketing, Business Strategy, Communication, Conflict Management, Networking Project Management, W O R K EX P E R I E N C E"
+        },
+        "digital marketing": {
+          "max_sim": 0.340977082194269,
+          "best_chunk_text": "D O G U K A N M O H A M M A D A L I C O M P E T E N C E Business Development, Trading, Negotiation, Sales & Marketing, Business Strategy, Communication, Conflict Management, Networking Project Management, W O R K EX P E R I E N C E"
+        },
+        "business development": {
+          "max_sim": 0.520583121741832,
+          "best_chunk_text": "Business Development |FABEL CORP| 2020-2021 Business Development FABLE Corp start-up skunk project in the biomedical and biopharma industry. Creating networks of collaboration, and communication and adapting"
+        }
+      }
+    },
+    {
+      "resume_id": "0f979c80-e422-4cb7-91a2-39827771718f",
+      "resume_name": "Resume_MahmoudElKassem.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.283300612366273,
+          "best_chunk_text": "- Collect business needs, gather, analyze, formalize, and coordinate functional and non-functional requirements. - Handled financial tasks, including invoicing, tracking payments, and reconciling accounts."
+        },
+        "digital marketing": {
+          "max_sim": 0.302779674530038,
+          "best_chunk_text": "- Hard Skills: Microsoft Office, Python, Canva, CRM systems, LinkedIn Sales Navigator - Soft Skills: Communication, Teamwork, Time Management, Critical thinking, Analytical thinking"
+        },
+        "business development": {
+          "max_sim": 0.443739182503324,
+          "best_chunk_text": "- Understand client requirements and collaborate with internal teams to create tailored solutions - Identify and develop new business opportunities to expand our presence in the European market, driving strategic growth initiatives."
+        }
+      }
+    },
+    {
+      "resume_id": "e0bdda71-f733-463b-a887-a8b0e03c120d",
+      "resume_name": "RESUME- Szpott Sandra.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.23525660353213,
+          "best_chunk_text": "- Provide insights or reports on student engagement and learning outcomes. Track&Field Assistant Coach University of Southern Mississippi- , Hattiesburg,MS,USA October 2021 June 2022"
+        },
+        "digital marketing": {
+          "max_sim": 0.212059040420171,
+          "best_chunk_text": "•Established and communicated clear learning objectives to foster students progress and academic performance. •Improved students engagement by implementing student-centered classroom maganement techniques to foster academic curiosity."
+        },
+        "business development": {
+          "max_sim": 0.235532895592878,
+          "best_chunk_text": "Skills curriculum development planning lessons teamwork collaboration time management leadership communication conflict resolution critical thinking differentiated instruction Languages English Polish German Sandra Szpott Classroom Teacher"
+        }
+      }
+    },
+    {
+      "resume_id": "c2d5684d-98ec-4e15-b4a1-0706cb25e7b8",
+      "resume_name": "Resume_Manar.pdf",
+      "scores": {
+        "sales": {
+          "max_sim": 0.169408902280729,
+          "best_chunk_text": " Contributed to the preparation of reports and data analysis for national and international sustainability competitions, including UI GreenMetric.  Played an active role in enhancing the university's sustainability strategies."
+        },
+        "digital marketing": {
+          "max_sim": 0.182108865473541,
+          "best_chunk_text": " Contributed to the preparation of reports and data analysis for national and international sustainability competitions, including UI GreenMetric.  Played an active role in enhancing the university's sustainability strategies."
+        },
+        "business development": {
+          "max_sim": 0.231919531364553,
+          "best_chunk_text": " Contributed to the preparation of reports and data analysis for national and international sustainability competitions, including UI GreenMetric.  Played an active role in enhancing the university's sustainability strategies."
         }
       }
     }

@@ -2,9 +2,6 @@ import { supabaseAdmin } from "./supabase.js";
 import dotenv from "dotenv"; 
 dotenv.config();
 
-// Suppress punycode deprecation warning
-process.removeAllListeners('warning');
-
 async function clearDatabase() {
   console.log("🗑️  Clearing database...");
   
