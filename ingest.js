@@ -96,14 +96,25 @@ async function upsertChunksBatched(resumeId, chunks) {
   for (let i = 0; i < chunks.length; i += EMBED_BATCH) {
     const seg = chunks.slice(i, i + EMBED_BATCH);
     const embs = await embedManyBatched(seg.map(c => c.text));
-    const rows = seg.map((c, j) => ({
-      resume_id: resumeId,
-      page: null,
-      char_start: c.charStart,
-      char_end: c.charEnd,
-      text: c.text,
-      embedding: embs[j]
-    }));
+    const rows = seg.map((c, j) => {
+      // Estimate page number based on character position (~3000 chars per page)
+      const estimatedPage = Math.floor(c.charStart / 3000) + 1;
+      
+      // Create coordinates JSON with character positions
+      const coordinates = {
+        char_start: c.charStart,
+        char_end: c.charEnd,
+        text_length: c.text.length
+      };
+      
+      return {
+        resume_id: resumeId,
+        page_number: estimatedPage,
+        coordinates: coordinates,
+        text: c.text,
+        embedding: embs[j]
+      };
+    });
     const { error } = await supabaseAdmin.from("resume_chunks").insert(rows);
     if (error) throw error;
   }

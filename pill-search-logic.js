@@ -108,17 +108,21 @@ export async function pillMatrixSearch(pillsInput, options = {}) {
     }
   }
 
-  const chunkTextMap = new Map();
+  const chunkDataMap = new Map();
   if (allChunkIds.size > 0) {
     const { data: chunks, error: chunkError } = await supabaseAdmin
       .from("resume_chunks")
-      .select("id, text")
+      .select("id, text, page_number, coordinates")
       .in("id", Array.from(allChunkIds));
     if (chunkError) throw chunkError;
 
     if (chunks) {
       for (const chunk of chunks) {
-        chunkTextMap.set(chunk.id, chunk.text);
+        chunkDataMap.set(chunk.id, {
+          text: chunk.text,
+          page_number: chunk.page_number,
+          coordinates: chunk.coordinates
+        });
       }
     }
   }
@@ -138,10 +142,14 @@ export async function pillMatrixSearch(pillsInput, options = {}) {
       const winner = resumeWinners.get(resumeId);
       
       if (winner) {
-        const chunkText = chunkTextMap.get(winner.best_chunk_id) || "";
+        const chunkData = chunkDataMap.get(winner.best_chunk_id);
+        const chunkText = chunkData?.text || "";
+        
         scores[pill] = {
           max_sim: winner.max_sim,
-          best_chunk_text: chunkText
+          best_chunk_text: chunkText,
+          page_number: chunkData?.page_number || null,
+          coordinates: chunkData?.coordinates || null
         };
         
         if (includeChunkIds) {
@@ -151,7 +159,9 @@ export async function pillMatrixSearch(pillsInput, options = {}) {
         // No match for this pill-resume combination
         scores[pill] = {
           max_sim: 0,
-          best_chunk_text: ""
+          best_chunk_text: "",
+          page_number: null,
+          coordinates: null
         };
         
         if (includeChunkIds) {
