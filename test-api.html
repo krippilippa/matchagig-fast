@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Result Search API Test</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2563eb;
+            margin-bottom: 24px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        label {
+            font-weight: 600;
+            color: #374151;
+        }
+        
+        input, select, button {
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        button:hover {
+            background: #1d4ed8;
+        }
+        
+        button:disabled {
+            background: #9ca3af;
+            cursor: not-allowed;
+        }
+        
+        .loading {
+            color: #6b7280;
+            font-style: italic;
+        }
+        
+        .error {
+            color: #dc2626;
+            background: #fef2f2;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #fecaca;
+            margin-bottom: 16px;
+        }
+        
+        .results {
+            margin-top: 24px;
+        }
+        
+        .resume-card {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #10b981;
+        }
+        
+        .resume-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .resume-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .resume-id {
+            font-size: 12px;
+            color: #6b7280;
+            font-family: monospace;
+        }
+        
+        .pill-results {
+            margin-bottom: 20px;
+        }
+        
+        .pill-title {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+        
+        .single-result {
+            background: white;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .multiple-results {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .result-item {
+            background: white;
+            padding: 16px;
+            border-radius: 6px;
+            border: 1px solid #e5e7eb;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .result-item:nth-child(2) {
+            border-left-color: #8b5cf6;
+        }
+        
+        .result-item:nth-child(3) {
+            border-left-color: #f59e0b;
+        }
+        
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .rank {
+            background: #e5e7eb;
+            color: #374151;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .similarity {
+            color: #059669;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        .chunk-text {
+            color: #374151;
+            line-height: 1.6;
+            margin: 8px 0;
+        }
+        
+        .metadata {
+            color: #6b7280;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        
+        .json-output {
+            background: #1f2937;
+            color: #f9fafb;
+            padding: 16px;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            margin-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Multi-Result Search API Test</h1>
+        
+        <div class="controls">
+            <div class="input-group">
+                <label for="pills">Pills (comma-separated):</label>
+                <input type="text" id="pills" value="sales experience, communication skills" placeholder="e.g., sales experience, communication skills">
+            </div>
+            
+            <div class="input-group">
+                <label for="nrOfResults">Number of Results:</label>
+                <select id="nrOfResults">
+                    <option value="1">1 (Single Result)</option>
+                    <option value="2">2 (Top 2 Results)</option>
+                    <option value="3" selected>3 (Top 3 Results)</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="topkResumes">Max Resumes:</label>
+                <input type="number" id="topkResumes" value="5" min="1" max="50">
+            </div>
+            
+            <button onclick="searchPills()" id="searchBtn">Search</button>
+        </div>
+        
+        <div id="error" class="error" style="display: none;"></div>
+        <div id="loading" class="loading" style="display: none;">Searching...</div>
+        <div id="results" class="results"></div>
+    </div>
+
+    <script>
+        async function searchPills() {
+            const searchBtn = document.getElementById('searchBtn');
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            const results = document.getElementById('results');
+            
+            // Clear previous results
+            error.style.display = 'none';
+            results.innerHTML = '';
+            
+            // Get form values
+            const pillsText = document.getElementById('pills').value.trim();
+            const nrOfResults = parseInt(document.getElementById('nrOfResults').value);
+            const topkResumes = parseInt(document.getElementById('topkResumes').value);
+            
+            if (!pillsText) {
+                showError('Please enter at least one pill');
+                return;
+            }
+            
+            const pills = pillsText.split(',').map(p => p.trim()).filter(p => p);
+            if (pills.length === 0) {
+                showError('Please enter valid pills');
+                return;
+            }
+            
+            // Show loading
+            searchBtn.disabled = true;
+            loading.style.display = 'block';
+            
+            try {
+                const response = await fetch('/search/pills', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        pills: pills.map(pill => ({ pill })),
+                        nr_of_results: nrOfResults,
+                        topk_resumes: topkResumes
+                    })
+                });
+                
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `HTTP ${response.status}`);
+                }
+                
+                const data = await response.json();
+                displayResults(data);
+                
+            } catch (err) {
+                showError(`Search failed: ${err.message}`);
+            } finally {
+                searchBtn.disabled = false;
+                loading.style.display = 'none';
+            }
+        }
+        
+        function showError(message) {
+            const error = document.getElementById('error');
+            error.textContent = message;
+            error.style.display = 'block';
+        }
+        
+        function displayResults(data) {
+            const results = document.getElementById('results');
+            const isMultiResult = data.nrOfResults && data.nrOfResults > 1;
+            
+            let html = `
+                <h2>Search Results</h2>
+                <p><strong>Pills:</strong> ${data.pills.join(', ')}</p>
+                <p><strong>Results per pill:</strong> ${data.nrOfResults || 1}</p>
+                <p><strong>Found ${data.resumes.length} resumes</strong></p>
+            `;
+            
+            data.resumes.forEach((resume, index) => {
+                html += `
+                    <div class="resume-card">
+                        <div class="resume-header">
+                            <div class="resume-name">${resume.resume_name}</div>
+                            <div class="resume-id">${resume.resume_id.substring(0, 8)}...</div>
+                        </div>
+                `;
+                
+                Object.entries(resume.scores).forEach(([pill, score]) => {
+                    html += `<div class="pill-results">`;
+                    html += `<div class="pill-title">${pill}</div>`;
+                    
+                    if (isMultiResult && score.results) {
+                        // Multiple results
+                        html += `<div class="multiple-results">`;
+                        score.results.forEach((result, i) => {
+                            html += `
+                                <div class="result-item">
+                                    <div class="result-header">
+                                        <span class="rank">#${result.rank}</span>
+                                        <span class="similarity">${(result.similarity * 100).toFixed(1)}% match</span>
+                                    </div>
+                                    <div class="chunk-text">${result.chunk_text}</div>
+                                    <div class="metadata">
+                                        Page ${result.page_number} • 
+                                        Characters ${result.coordinates.char_start}-${result.coordinates.char_end}
+                                    </div>
+                                </div>
+                            `;
+                        });
+                        html += `</div>`;
+                    } else {
+                        // Single result
+                        html += `
+                            <div class="single-result">
+                                <div class="similarity">${(score.max_sim * 100).toFixed(1)}% match</div>
+                                <div class="chunk-text">${score.best_chunk_text}</div>
+                                <div class="metadata">
+                                    Page ${score.page_number} • 
+                                    Characters ${score.coordinates.char_start}-${score.coordinates.char_end}
+                                </div>
+                            </div>
+                        `;
+                    }
+                    
+                    html += `</div>`;
+                });
+                
+                html += `</div>`;
+            });
+            
+            // Add raw JSON output
+            html += `
+                <details>
+                    <summary>Raw JSON Response</summary>
+                    <div class="json-output">${JSON.stringify(data, null, 2)}</div>
+                </details>
+            `;
+            
+            results.innerHTML = html;
+        }
+        
+        // Allow Enter key to trigger search
+        document.getElementById('pills').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchPills();
+            }
+        });
+        
+        // Auto-search on page load
+        window.addEventListener('load', function() {
+            searchPills();
+        });
+    </script>
+</body>
+</html>
