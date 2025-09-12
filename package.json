@@ -2,14 +2,11 @@
   "name": "ai-recruiter-demo",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ingest": "node --no-deprecation ingest.js",
-    "search": "node --no-deprecation search.js",
     "clear": "node --no-deprecation clear-db.js",
-    "pill:one": "node --no-deprecation pill-one.js",
-    "pill:many": "node --no-deprecation pill-many.js",
     "dev:server": "node server.js"
   },
   "keywords": [],

@@ -1,8 +1,5 @@
 import express from 'express';
-import { readFileSync } from 'fs';
 import cors from 'cors';
-import { pillMatrixSearch } from './pill-search-logic.js';
-import { pillMatrixSearchMulti } from './pill-search-logic-multi.js';
 import { weightedPillSearch } from './weighted-pill-search.js';
 import { getResumeDetailsEfficient } from './get-resume-details-efficient.js';
 
@@ -11,9 +8,6 @@ const PORT = process.env.PORT || 3000;
 
 // Toggle for dummy data vs real LLM calls
 const USE_DUMMY_PILLS = true;
-
-// Toggle for dummy search vs real pill-many logic
-const USE_DUMMY_SEARCH = false;
 
 // Middleware
 app.use(cors()); // Enable CORS for all routes
@@ -45,54 +39,6 @@ app.post('/pillpack/compile', (req, res) => {
   }
 });
 
-// Search pills endpoint
-app.post('/search/pills', async (req, res) => {
-  if (USE_DUMMY_SEARCH) {
-    try {
-      const dummySearchResults = JSON.parse(readFileSync('./pill_many_output.json', 'utf8'));
-      res.status(200).json(dummySearchResults);
-    } catch (error) {
-      console.error('Error reading pill_many_output.json:', error);
-      res.status(500).json({ error: 'Failed to load dummy data' });
-    }
-  } else {
-    try {
-      const { pills, topk_resumes, include_chunk_ids, nr_of_results } = req.body;
-      
-      if (!pills || !Array.isArray(pills)) {
-        return res.status(400).json({ 
-          error: 'Invalid input: pills array is required' 
-        });
-      }
-
-      // Validate nr_of_results
-      if (nr_of_results && (nr_of_results < 1 || nr_of_results > 3)) {
-        return res.status(400).json({ 
-          error: 'nr_of_results must be between 1 and 3' 
-        });
-      }
-
-      const options = {
-        topkResumes: topk_resumes || 999999,
-        includeChunkIds: include_chunk_ids || false,
-        nrOfResults: nr_of_results || 1
-      };
-
-      // Use multi-result function if nr_of_results > 1, otherwise use original
-      const result = (nr_of_results && parseInt(nr_of_results) > 1)
-        ? await pillMatrixSearchMulti(pills, options)
-        : await pillMatrixSearch(pills, options);
-        
-      res.status(200).json(result);
-    } catch (error) {
-      console.error('Error in pill search:', error);
-      res.status(500).json({ 
-        error: 'Internal server error during search',
-        details: error.message 
-      });
-    }
-  }
-});
 
 // Weighted pill search endpoint
 app.post('/search/pills/weighted', async (req, res) => {
