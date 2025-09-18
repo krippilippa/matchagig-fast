@@ -1,13 +1,28 @@
 import express from 'express';
 import cors from 'cors';
+import fs from 'fs';
 import { weightedPillSearch } from './weighted-pill-search.js';
 import { getResumeDetailsEfficient } from './get-resume-details-efficient.js';
+import { extractPillsFromJobDescription } from './pill-compile.js';
+
+// Import dummy data
+const dummyPills = JSON.parse(fs.readFileSync('./dummy-data/dummy-pills.json', 'utf8'));
+const dummyWeightedSearchResults = JSON.parse(fs.readFileSync('./dummy-data/dummy-weighted-search.json', 'utf8'));
+const dummyResumeDetailsResults = JSON.parse(fs.readFileSync('./dummy-data/dummy-resume-details.json', 'utf8'));
+
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Toggle for dummy data vs real LLM calls
 const USE_DUMMY_PILLS = true;
+
+// Toggle for dummy search vs real weighted search
+const USE_DUMMY_SEARCH = false;
+
+// Toggle for dummy resume details vs real resume details
+const USE_DUMMY_RESUME_DETAILS = false;
+
 
 // Middleware
 app.use(cors()); // Enable CORS for all routes
@@ -23,19 +38,46 @@ app.post('/health', (req, res) => {
 });
 
 // Pillpack compile endpoint
-app.post('/pillpack/compile', (req, res) => {
-  // For now, ignore input body (jd, target_pills) and use toggle
-  if (USE_DUMMY_PILLS) {
-    const dummyPills = {
-      "pills": [
-        { "pill": "Has experience in sales" },
-        { "pill": "Strong communication skills" }
-      ]
-    };
-    res.status(200).json(dummyPills);
-  } else {
-    // Placeholder for real LLM implementation
-    res.status(200).json({ pills: [] });
+app.post('/pillpack/compile', async (req, res) => {
+  try {
+    // Return dummy data if toggle is enabled
+    if (USE_DUMMY_PILLS) {
+      res.status(200).json(dummyPills);
+      return;
+    }
+
+    const { jd } = req.body;
+    
+    // Input validation
+    if (!jd || typeof jd !== 'string') {
+      return res.status(400).json({ 
+        error: 'Invalid input: jd (job description) is required and must be a string' 
+      });
+    }
+
+    if (jd.length < 50) {
+      return res.status(400).json({ 
+        error: 'Job description must be at least 50 characters long' 
+      });
+    }
+
+    if (jd.length > 10000) {
+      return res.status(400).json({ 
+        error: 'Job description must be less than 10,000 characters' 
+      });
+    }
+
+    // Extract pills using LLM
+    const extractedPills = await extractPillsFromJobDescription(jd);
+    
+    res.status(200).json({ pills: extractedPills });
+    
+  } catch (error) {
+    console.error('Error in pillpack compile:', error);
+    res.status(500).json({ 
+      error: 'Internal server error during pill extraction',
+      details: error.message 
+    });
   }
 });
 
@@ -43,6 +85,12 @@ app.post('/pillpack/compile', (req, res) => {
 // Weighted pill search endpoint
 app.post('/search/pills/weighted', async (req, res) => {
   try {
+    // Return dummy data if toggle is enabled
+    if (USE_DUMMY_SEARCH) {
+      res.status(200).json(dummyWeightedSearchResults);
+      return;
+    }
+
     const { pills, top_k, offset } = req.body;
     
     if (!pills || !Array.isArray(pills)) {
@@ -72,7 +120,7 @@ app.post('/search/pills/weighted', async (req, res) => {
     }
 
     const options = {
-      top_k: top_k || 100,
+      top_k: top_k || 15,
       offset: offset || 0,
       includeResumeData: true
     };
@@ -92,6 +140,12 @@ app.post('/search/pills/weighted', async (req, res) => {
 // Get detailed pill results for a specific resume
 app.post('/search/resume/details', async (req, res) => {
   try {
+    // Return dummy data if toggle is enabled
+    if (USE_DUMMY_RESUME_DETAILS) {
+      res.status(200).json(dummyResumeDetailsResults);
+      return;
+    }
+
     const { resume_id, pills, results_per_pill } = req.body;
 
     if (!resume_id) {

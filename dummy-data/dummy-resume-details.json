@@ -1,0 +1,88 @@
+{
+  "pills": ["Has experience in sales", "Strong communication skills"],
+  "resumes": [
+    {
+      "resume_id": "06456735-5b89-47a9-91e1-a682e55ab2ee",
+      "resume_name": "Resume_Puchala_Barbara_2024.pdf",
+      "pdf_url": "https://gqiozewxiiipyhuewvqc.supabase.co/storage/v1/object/public/resumes/c8726dfb41578676e11dd86436322ffb32a4b9879fde31f8f7b5a7c9fb1eee56/c8726dfb41578676e11dd86436322ffb32a4b9879fde31f8f7b5a7c9fb1eee56.pdf",
+      "scores": {
+        "Has experience in sales": {
+          "results": [
+            {
+              "similarity": 0.500978052732727,
+              "chunk_text": "Experienced with ServiceNow and Veeva Valut, InContact, Genesis, Team player; supportive, good coaching skills, Excellent organizational skills, and experience in an operational and customer-facing role",
+              "page_number": 2,
+              "coordinates": {
+                "char_end": 3742,
+                "char_start": 3540,
+                "text_length": 202
+              },
+              "rank": 1
+            },
+            {
+              "similarity": 0.46213182806969,
+              "chunk_text": "- Searching sales opportunities and identifying customer needs, - Perform cost-benefit and needs analysis of existing and potential customers to meet their needs, participate in sales negotiations.",
+              "page_number": 1,
+              "coordinates": {
+                "char_end": 2434,
+                "char_start": 2237,
+                "text_length": 197
+              },
+              "rank": 2
+            },
+            {
+              "similarity": 0.423047733993765,
+              "chunk_text": "- Qualify leads and set up meetings to deliver best customer experience. - Reach out via phone, email, or/and social media channels to prospects.",
+              "page_number": 1,
+              "coordinates": {
+                "char_end": 464,
+                "char_start": 319,
+                "text_length": 145
+              },
+              "rank": 3
+            }
+          ]
+        },
+        "Strong communication skills": {
+          "results": [
+            {
+              "similarity": 0.529383329785865,
+              "chunk_text": "Professional and responsible, Have ability to work effectively under pressure and unsupervised, Strong communication and leadership skills to build quality relationships with the Team and with the Partners, Strong problem-solving skills, attention to detail, the ability to prioritize tasks effectively.",
+              "page_number": 2,
+              "coordinates": {
+                "char_end": 4046,
+                "char_start": 3743,
+                "text_length": 303
+              },
+              "rank": 1
+            },
+            {
+              "similarity": 0.397310304321098,
+              "chunk_text": "Experienced with ServiceNow and Veeva Valut, InContact, Genesis, Team player; supportive, good coaching skills, Excellent organizational skills, and experience in an operational and customer-facing role",
+              "page_number": 2,
+              "coordinates": {
+                "char_end": 3742,
+                "char_start": 3540,
+                "text_length": 202
+              },
+              "rank": 2
+            },
+            {
+              "similarity": 0.325847844728957,
+              "chunk_text": "- Provide excellent customer experience through accurate information, training, and support if required, keeping high level of CSAT, January 2003 — January 2006 English translator/ interpreter freelance Education",
+              "page_number": 3,
+              "coordinates": {
+                "char_end": 7028,
+                "char_start": 6816,
+                "text_length": 212
+              },
+              "rank": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "nrOfResults": 3
+}
+

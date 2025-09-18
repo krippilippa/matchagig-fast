@@ -1,0 +1,61 @@
+{
+  "results": [
+    {
+      "resume_id": "06456735-5b89-47a9-91e1-a682e55ab2ee",
+      "resume_name": "Resume_Puchala_Barbara_2024.pdf",
+      "pdf_url": "https://gqiozewxiiipyhuewvqc.supabase.co/storage/v1/object/public/resumes/c8726dfb41578676e11dd86436322ffb32a4b9879fde31f8f7b5a7c9fb1eee56/c8726dfb41578676e11dd86436322ffb32a4b9879fde31f8f7b5a7c9fb1eee56.pdf",
+      "weighted_score": 1.29505304741152,
+      "pill_scores": {
+        "pill_1": 0.500978052732727,
+        "pill_2": 0.529383329785865
+      },
+      "pill_chunks": {
+        "pill_1": "Experienced with ServiceNow and Veeva Valut, InContact, Genesis, Team player; supportive, good coaching skills, Excellent organizational skills, and experience in an operational and customer-facing role",
+        "pill_2": "Professional and responsible, Have ability to work effectively under pressure and unsupervised, Strong communication and leadership skills to build quality relationships with the Team and with the Partners, Strong problem-solving skills, attention to detail, the ability to prioritize tasks effectively."
+      },
+      "rank": 1
+    },
+    {
+      "resume_id": "8fb0e2ee-3733-481c-8815-34b95de45417",
+      "resume_name": "resume_aml_adel.pdf",
+      "pdf_url": "https://gqiozewxiiipyhuewvqc.supabase.co/storage/v1/object/public/resumes/3c5e76e75d964113f1d9a7b92354ef24fb2b8e6fc46d51abae72837846c9cb29/3c5e76e75d964113f1d9a7b92354ef24fb2b8e6fc46d51abae72837846c9cb29.pdf",
+      "weighted_score": 1.24860364227892,
+      "pill_scores": {
+        "pill_1": 0.507007583766952,
+        "pill_2": 0.494397372341314
+      },
+      "pill_chunks": {
+        "pill_1": "Skilled in building client relationships, negotiating deals, and developing growth strategies to increase revenue. Adept at market research, business strategy, and partnership development.",
+        "pill_2": "Interpersonal SkillsCommunication, Teamwork, Emotional Intelligence, Problem Solving, Public Speaking Administrative SkillsAdministration, Customer Experience, Customer Satisfaction, Multitasking, Decision-Making LANGUAGES Arabic"
+      },
+      "rank": 2
+    },
+    {
+      "resume_id": "950255dd-d08e-47b8-8a36-1fa98c049087",
+      "resume_name": "Resume-Mabel Magnusson.pdf",
+      "pdf_url": "https://gqiozewxiiipyhuewvqc.supabase.co/storage/v1/object/public/resumes/95162b8643bd2db3771ba3e66cf202d0dd2b670652336ab93bd89a0449f9dbef/95162b8643bd2db3771ba3e66cf202d0dd2b670652336ab93bd89a0449f9dbef.pdf",
+      "weighted_score": 0.67813583933979,
+      "pill_scores": {
+        "pill_1": 0.510216682540377,
+        "pill_2": 0.378612771199611
+      },
+      "pill_chunks": {
+        "pill_1": "Identified and pursued new sales opportunities through effective lead qualification and prospecting. Conducted successful sales appointments, showcasing product benefits and negotiating contracts.",
+        "pill_2": "Provided technical support to clients, troubleshooting issues and resolving problems. Demonstrated exceptional problem-solving skills and attention to detail. Collaborated effectively within a team environment to achieve common goals."
+      },
+      "rank": 3
+    }
+  ],
+  "total_results": 3,
+  "page": 1,
+  "has_more": false,
+  "pills": [
+    "Has experience in sales",
+    "Strong communication skills"
+  ],
+  "weights": [
+    1,
+    1.5
+  ]
+}
+
